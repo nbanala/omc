@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('mentors','MentorController');
+Route::resource('students','StudentController');
+Route::resource('addcomments','AddcommentController');
+
 
 
 

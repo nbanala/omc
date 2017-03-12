@@ -1,18 +1,22 @@
 @extends('app')
 @section('content')
     <h1>Update</h1>
-    {!! Form::model($mentor,['method' => 'PATCH','route'=>['mentors.update',$mentor->id]]) !!}
+    {!! Form::model($student,['method' => 'PATCH','route'=>['students.update',$student->id]]) !!}
     <div class="form-group">
         {!! Form::label('name', 'Name:') !!}
         {!! Form::text('name',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('qualification', 'Qualification') !!}
-        {!! Form::text('qualification',null,['class'=>'form-control']) !!}
+        {!! Form::label('id', 'ID') !!}
+        {!! Form::text('id',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Address', 'Address:') !!}
-        {!! Form::text('Address',null,['class'=>'form-control']) !!}
+        {!! Form::label('class', 'Class:') !!}
+        {!! Form::text('class',null,['class'=>'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('address', 'Address:') !!}
+        {!! Form::text('address',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('Zip', 'Zip:') !!}
@@ -23,8 +27,8 @@
         {!! Form::text('Email',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Phone', 'Phone:') !!}
-        {!! Form::text('Phone',null,['class'=>'form-control']) !!}
+        {!! Form::label('cell_phone', 'Phone:') !!}
+        {!! Form::text('Cell_Phone',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
@@ -32,5 +36,3 @@
 	
     {!! Form::close() !!}
 @stop
-
-   

@@ -1,31 +1,27 @@
 @extends('app')
 @section('content')
-    <h1>Create Mentor</h1>
+    <h1>Insert Comment</h1>
     
-     {!! Form::open(['url' => 'mentors']) !!}
+     {!! Form::open(['url' => 'addcomments']) !!}
+	 <a style="font-size: 20px;"> Mentor ID </a> 
+	 <div class="form-group">
+        {!! Form::select('customer_id', $mentors) !!}
+    </div>
      <div class="form-group">
-        {!! Form::label('name', 'Name:') !!}
-        {!! Form::text('name',null,['class'=>'form-control']) !!}
+        {!! Form::label('id', 'ID:') !!}
+        {!! Form::text('id',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('qualification', 'Qualification') !!}
-        {!! Form::text('qualification',null,['class'=>'form-control']) !!}
+        {!! Form::label('student_id', 'student_id') !!}
+        {!! Form::text('student_id',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Address', 'Address:') !!}
-        {!! Form::text('address',null,['class'=>'form-control']) !!}
+        {!! Form::label('mentor_id', 'mentor_id') !!}
+        {!! Form::text('mentor_id',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Zip', 'State:') !!}
-        {!! Form::text('zip',null,['class'=>'form-control']) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::label('Email', 'Email:') !!}
-        {!! Form::text('email',null,['class'=>'form-control']) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::label('Phone', 'Primary Email:') !!}
-        {!! Form::text('phone',null,['class'=>'form-control']) !!}
+        {!! Form::label('comment', 'comment') !!}
+        {!! Form::text('comment',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}

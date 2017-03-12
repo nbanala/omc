@@ -45,10 +45,10 @@ class MentorController extends Controller
         $mentor->zip = $request['zip'];
         $mentor->email = $request['email'];
         $mentor->phone = $request['phone'];
-        $mentor->comment = $request['comment'];
+       // $mentor->comment = $request['comment'];
         $mentor->save();
         $mentors = Mentor::all();
-        return view('Home',compact('mentors'));
+        return view('mentors.index',compact('mentors'));
     }
 
     public function edit($id)
@@ -79,6 +79,6 @@ class MentorController extends Controller
      {
          Mentor::find($id)->delete();
          $mentors = Mentor::all();
-         return view('home', compact('mentors'));
+         return view('mentors.index', compact('mentors'));
      }
 }

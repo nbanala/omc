@@ -20,6 +20,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 Route::resource('mentors','MentorController');
 
+Route::resource('students','StudentController');
+
+Route::resource('addcomments','AddcommentController');
+
+
+
 
 Auth::routes();
 

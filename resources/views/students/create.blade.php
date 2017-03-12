@@ -1,31 +1,35 @@
 @extends('app')
 @section('content')
-    <h1>Create Mentor</h1>
+    <h1>Create Student</h1>
     
-     {!! Form::open(['url' => 'mentors']) !!}
+     {!! Form::open(['url' => 'students']) !!}
      <div class="form-group">
         {!! Form::label('name', 'Name:') !!}
         {!! Form::text('name',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('qualification', 'Qualification') !!}
-        {!! Form::text('qualification',null,['class'=>'form-control']) !!}
+        {!! Form::label('id', 'ID') !!}
+        {!! Form::text('id',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Address', 'Address:') !!}
-        {!! Form::text('address',null,['class'=>'form-control']) !!}
+        {!! Form::label('class', 'class:') !!}
+        {!! Form::text('class',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Zip', 'State:') !!}
+        {!! Form::label('zip', 'Zip:') !!}
         {!! Form::text('zip',null,['class'=>'form-control']) !!}
+    </div>
+    <div class="form-group">
+        {!! Form::label('address', 'Address:') !!}
+        {!! Form::text('address',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('Email', 'Email:') !!}
         {!! Form::text('email',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Phone', 'Primary Email:') !!}
-        {!! Form::text('phone',null,['class'=>'form-control']) !!}
+        {!! Form::label('cell_phone', 'Cell Phone:') !!}
+        {!! Form::text('cell_phone',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
