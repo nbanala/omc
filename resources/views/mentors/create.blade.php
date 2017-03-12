@@ -16,7 +16,7 @@
         {!! Form::text('address',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Zip', 'State:') !!}
+        {!! Form::label('Zip', 'Zip:') !!}
         {!! Form::text('zip',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
@@ -24,7 +24,7 @@
         {!! Form::text('email',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Phone', 'Primary Email:') !!}
+        {!! Form::label('Phone', 'Phone:') !!}
         {!! Form::text('phone',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
