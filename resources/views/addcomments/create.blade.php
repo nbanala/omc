@@ -3,22 +3,20 @@
     <h1>Insert Comment</h1>
     
      {!! Form::open(['url' => 'addcomments']) !!}
-	 <a style="font-size: 20px;"> Mentor ID </a> 
-	 <div class="form-group">
-        {!! Form::select('customer_id', $mentors) !!}
+	 <h3> Mentor ID </h3> 
+	  <div class="form-group">
+		{!! Form::select('mentor_id', $mentors) !!}
     </div>
-     <div class="form-group">
+     <!--div class="form-group">
         {!! Form::label('id', 'ID:') !!}
         {!! Form::text('id',null,['class'=>'form-control']) !!}
-    </div>
+    </div-->
+	
     <div class="form-group">
         {!! Form::label('student_id', 'student_id') !!}
         {!! Form::text('student_id',null,['class'=>'form-control']) !!}
     </div>
-    <div class="form-group">
-        {!! Form::label('mentor_id', 'mentor_id') !!}
-        {!! Form::text('mentor_id',null,['class'=>'form-control']) !!}
-    </div>
+   
     <div class="form-group">
         {!! Form::label('comment', 'comment') !!}
         {!! Form::text('comment',null,['class'=>'form-control']) !!}

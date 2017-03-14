@@ -23,6 +23,13 @@ class AddcommentController extends Controller
          $mentors = Mentor::pluck('id');
 		 return view('addcomments.create', compact('mentors'));
      }
+      public function show($id)
+    {
+
+        $addcomment = Addcomment::findOrFail($id);
+
+        return view('addcomments.show',compact('addcomment'));
+    }
 
     public function store(Request $request)
     {
@@ -32,7 +39,12 @@ class AddcommentController extends Controller
 
         return redirect('addcomments');
     }
-    
+    public function destroy($id)
+     {
+         Addcomment::find($id)->delete();
+         $addcomments = Addcomment::all();
+         return view('addcomments.index', compact('addcomments'));
+     }
     
 }
 

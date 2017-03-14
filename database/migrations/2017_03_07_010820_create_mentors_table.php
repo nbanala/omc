@@ -21,7 +21,7 @@ public function up()
 		$table->string('zip');
 		$table->string('email');
         $table->string('phone');
-        $table->string('comment');		
+        //$table->string('comment');		
         $table->timestamps();
     });
 }

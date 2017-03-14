@@ -9,9 +9,10 @@
         <thead>
         <tr class="bg-info">
       		<th>ID</th>
-            <th>mentor_id</th>
-            <th>student_id</th>
-            <th>comment</th>
+            <th>Mentor</th>
+			<th>Student</th>
+            <th>Comment</th>
+			<th>Action</th>
         </tr>
         </thead>
         <tbody>
@@ -21,6 +22,11 @@
                 <td>{{ $addcomment->mentor_id }}</td>
                 <td>{{ $addcomment->student_id }}</td>
                 <td>{{ $addcomment->comment}}</td>
+				<td>
+                    {!! Form::open(['method' => 'DELETE', 'route'=>['addcomments.destroy', $addcomment->id]])!!}
+                        {!! Form::submit('Delete', ['class' => 'btn btn-danger','name'=>'remove_levels']) !!}
+                    {!! Form::close() !!}
+                </td>
    
             </tr>
         @endforeach
