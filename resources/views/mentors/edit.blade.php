@@ -12,19 +12,19 @@
     </div>
     <div class="form-group">
         {!! Form::label('Address', 'Address:') !!}
-        {!! Form::text('Address',null,['class'=>'form-control']) !!}
+        {!! Form::text('address',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('Zip', 'Zip:') !!}
-        {!! Form::text('Zip',null,['class'=>'form-control']) !!}
+        {!! Form::text('zip',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('Email', 'Email:') !!}
-        {!! Form::text('Email',null,['class'=>'form-control']) !!}
+        {!! Form::text('email',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('Phone', 'Phone:') !!}
-        {!! Form::text('Phone',null,['class'=>'form-control']) !!}
+        {!! Form::text('phone',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
