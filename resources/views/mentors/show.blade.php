@@ -8,31 +8,31 @@
             <tr class="bg-info">
             <tr>
                 <td>Name</td>
-                <td><?php echo ($mentor['Name']); ?></td>
+                <td><?php echo ($mentor['name']); ?></td>
             </tr>
             <tr>
                 <td>ID</td>
-                <td><?php echo ($mentor['ID']); ?></td>
+                <td><?php echo ($mentor['id']); ?></td>
             </tr>
             <tr>
                 <td>Qualification</td>
-                <td><?php echo ($mentor['Qualification']); ?></td>
+                <td><?php echo ($mentor['qualification']); ?></td>
             </tr>
             <tr>
                 <td>Address</td>
-                <td><?php echo ($mentor['Address']); ?></td>
+                <td><?php echo ($mentor['address']); ?></td>
             </tr>
             <tr>
                 <td>Zip</td>
-                <td><?php echo ($mentor['Zip']); ?></td>
+                <td><?php echo ($mentor['zip']); ?></td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><?php echo ($mentor['Email']); ?></td>
+                <td><?php echo ($mentor['email']); ?></td>
             </tr>
             <tr>
                 <td>Phone</td>
-                <td><?php echo ($mentor['Phone']); ?></td>
+                <td><?php echo ($mentor['phone']); ?></td>
             </tr>
             
                   

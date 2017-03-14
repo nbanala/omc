@@ -11,20 +11,20 @@
         {!! Form::text('qualification',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Address', 'Address:') !!}
-        {!! Form::text('address',null,['class'=>'form-control']) !!}
+        {!! Form::label('address', 'Address:') !!}
+        {!! Form::text('Address',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Zip', 'Zip:') !!}
-        {!! Form::text('zip',null,['class'=>'form-control']) !!}
+        {!! Form::label('zip', 'Zip:') !!}
+        {!! Form::text('Zip',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Email', 'Email:') !!}
-        {!! Form::text('email',null,['class'=>'form-control']) !!}
+        {!! Form::label('email', 'Email:') !!}
+        {!! Form::text('Email',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Phone', 'Phone:') !!}
-        {!! Form::text('phone',null,['class'=>'form-control']) !!}
+        {!! Form::label('phone', 'Phone:') !!}
+        {!! Form::text('Phone',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}

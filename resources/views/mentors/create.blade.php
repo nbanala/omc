@@ -12,19 +12,19 @@
         {!! Form::text('qualification',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Address', 'Address:') !!}
+        {!! Form::label('address', 'Address:') !!}
         {!! Form::text('address',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Zip', 'Zip:') !!}
+        {!! Form::label('zip', 'Zip:') !!}
         {!! Form::text('zip',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Email', 'Email:') !!}
+        {!! Form::label('email', 'Email:') !!}
         {!! Form::text('email',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Phone', 'Phone:') !!}
+        {!! Form::label('phone', 'Phone:') !!}
         {!! Form::text('phone',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
