@@ -33,4 +33,3 @@ class CreateAdminsTable extends Migration
         Schema::drop('admins');
     }
 }
-

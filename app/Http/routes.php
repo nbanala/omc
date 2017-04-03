@@ -17,9 +17,15 @@ Route::get('/', function () {
 Route::resource('mentors','MentorController');
 Route::resource('students','StudentController');
 Route::resource('addcomments','AddcommentController');
+Route::resource('staffs','StaffController');
+Route::resource('admins','AdminController');
+Route::resource('meeting_schedules','MeetingScheduleController');
+Route::resource('meeting_mentors','MeetingMentorsController');
+Route::resource('student_details','StudentDetailsController');
+Route::resource('meeting_students','MeetingStudentsController');
 
-
-
+Route::get('profile','UserController@profile');
+Route::post('profile1','UserController@update_avatar');
 
 Route::auth();
 

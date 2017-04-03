@@ -20,7 +20,7 @@ class AddcommentController extends Controller
 
       public function create()
      {
-         $mentors = Mentor::pluck('id');
+         $mentors = Mentor::pluck('id','id');
 		 return view('addcomments.create', compact('mentors'));
      }
       public function show($id)
@@ -33,11 +33,24 @@ class AddcommentController extends Controller
 
     public function store(Request $request)
     {
-
-        $addcomment= new Addcomment($request->all());
+		$addcomment= new Addcomment($request->all());
         $addcomment->save();
 
         return redirect('addcomments');
+//$addcomment = new Addcomment();
+       //$addcomment->mentor_id = $request['mentor_id'];
+	  // $mentor_id = Input::get('mentor_id');
+		//$addcomment->mentor_id = input::get('mentor_id');
+	    //$addcomment->student_id = $request['student_id'];
+        //$addcomment->comment = $request['comment'];
+		//dd('Im here' );
+		//dd( $addcomment->mentor_id);
+		//$addcomment->save();
+       // $addcomment = Addcomment::all();
+        //$addcomment= new Addcomment($request->all());
+        //$addcomment->save();
+
+       // return redirect('addcomments');
     }
     public function destroy($id)
      {

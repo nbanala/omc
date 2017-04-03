@@ -14,7 +14,18 @@ class Admin extends Model
         'address',
         'zip',
         'cell_phone'
-
-
     ];
+
+    public function mentors() {
+        return $this->hasMany('App\Mentor');
+        }
+
+    public function students() {
+        return $this->hasMany('App\Student');
+        }
+
+    public function staffs() {
+        return $this->hasMany('App\Staff');
+        }
+
 }

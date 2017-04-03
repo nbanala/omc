@@ -5,7 +5,7 @@
      {!! Form::open(['url' => 'addcomments']) !!}
 	 <h3> Mentor ID </h3> 
 	  <div class="form-group">
-		{!! Form::select('mentor_id', $mentors) !!}
+		{!! Form::select('mentor_id', $mentors ) !!}
     </div>
      <!--div class="form-group">
         {!! Form::label('id', 'ID:') !!}

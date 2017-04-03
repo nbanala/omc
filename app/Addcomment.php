@@ -15,10 +15,10 @@ class Addcomment extends Model
 
 
     ];
-public function mentor() {
+        public function mentor() {
         return $this->belongsTo('App\Mentor');
-}
+        }
 		public function student() {
         return $this->belongsTo('App\Student');
-	}
+	   }
 }

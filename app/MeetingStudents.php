@@ -4,19 +4,18 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Staff extends Model
+class MeetingStudents extends Model
 {
     //
     protected $fillable=[
-        'name',
         'id',
-        'address',
-        'zip',
-        'email',
-        'cell_phone'
-    ];
+		'name',
+        'date',
+        'time',
+        'location'
 
-     public function mentor() {
+    ];
+    	public function mentor() {
         return $this->belongsTo('App\Mentor');
-        }
+	   }
 }

@@ -1,14 +1,10 @@
 @extends('app')
 @section('content')
     <h1>Update</h1>
-    {!! Form::model($mentor,['method' => 'PATCH','route'=>['mentors.update',$mentor->id]]) !!}
+    {!! Form::model($staffs,['method' => 'PATCH','route'=>['staffs.update',$staffs->id]]) !!}
     <div class="form-group">
         {!! Form::label('name', 'Name:') !!}
         {!! Form::text('name',null,['class'=>'form-control']) !!}
-    </div>
-    <div class="form-group">
-        {!! Form::label('qualification', 'Qualification') !!}
-        {!! Form::text('qualification',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::label('address', 'Address:') !!}

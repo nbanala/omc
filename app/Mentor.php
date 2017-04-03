@@ -11,10 +11,10 @@ class Mentor extends Model
         'name',
         'id',
         'qualification',
-        'Address',
-        'Zip',
-        'Email',
-        'Phone'
+        'address',
+        'zip',
+        'email',
+        'phone'
 
 
     ];

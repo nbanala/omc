@@ -1,86 +1,69 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-use App\Http\Requests;
+use Request;
 use App\Staff;
-
-
+use App\Mentor;
 
 class StaffController extends Controller
 {
 
     public function index()
     {
-        //
-        
-        $staffs=Staff:all();
-        
-        return view('staffs.index',compact('staffs'));
+        $staffs=Staff::all();
+         return view('staffs.index', compact('staffs'));
     }
 
-        public function create()
-     {
-         return view('staffs.create');
-     }
-
-         public function show($id)
-     {
-      
-        $staff=Staff::find($id);
-        return view('Home',compact('staff'));
-     }
-    // /**
-    //  * Store a newly created resource in storage.
-    //  *
-    //  * @return Response
-    //  */
-     public function store(Request $request)
+    public function show($id)
     {
-        $staff = new Staff();
-		$staff->id = $request['id'];
-        $staff->name = $request['name'];
-		$staff->email = $request['email'];
-        $staff->address = $request['address'];
-        $staff->zip = $request['zip'];
-        $staff->cell_phone = $request['cell_phone'];
-        $staff->save();
-        $staff = Staff::all();
-        return view('Home',compact('staffs'));
+        $staffs=Staff::find($id);
+        return view('staffs.show',compact('staffs'));
+    }
+
+
+    public function create()
+    {
+        $mentors = Mentor::pluck('id','id');
+        return view('staffs.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store()
+    {
+        $staffs=Request::all();
+        Staff::create($staffs);
+        return redirect('staffs');
     }
 
     public function edit($id)
-     {
-         $staff=Staff::find($id);
-         return view('staffs.edit',compact('staff'));
-     }
+    {
+        $staffs=Staff::find($id);
+        return view('staffs.edit',compact('staffs'));
+    }
 
-    // /**
-    //  * Update the specified resource in storage.
-    //  *
-    //  * @param  int  $id
-    //  * @return Response
-    //  */
-     public function update($id,Request $request)
-     {
-       
-		/*$mentorUpdate=Request::all();
-        $staff=Staff::find($id);
-        $student->update($studentUpdate);*/
-        $staff= new Staff($request->all());
-        $staff = Staff::find($id);
-        $staff-> update($request->all());
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function update($id)
+    {
+        //
+        $staffUpdate=Request::all();
+        $staffs=Staff::find($id);
+        $staffs->update($staffUpdate);
         return redirect('staffs');
-     }
+    }
 
-     public function destroy($id)
-     {
-         Staff::find($id)->delete();
-         $staffs = Staff::all();
-         return view('home', compact('staffs'));
-     }
+    public function destroy($id)
+    {
+        Staff::find($id)->delete();
+        return redirect('staffs');
+    }
+
+    
 }
-
-
-

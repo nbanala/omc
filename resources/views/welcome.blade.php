@@ -65,7 +65,9 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+
+      <div class="flex-center position-ref full-height" >
+	  <img src="http://lovgren.com/wp-content/uploads/2013/06/P4K.gif" alt="Mountain View" style="width:304px;height:228px;">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
