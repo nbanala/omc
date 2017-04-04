@@ -16,7 +16,7 @@
 @elseif (Auth::user()->role==='staff')
 <h2 align="center"><a href={{action('StaffController@index')}} style="font-size:75;">  Staff </a> 
          
-@else
+@else (Auth::user()->role==='Admin')
 
 <h2 align="center"><a href={{action('AdminController@index')}} style="font-size:75;"> Admin </a> </h2>
 @endif

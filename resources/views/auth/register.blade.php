@@ -65,6 +65,8 @@
                         <input id="role" type="radio" class="form-control" name="role" value='student'>Student</label> 
                         <label class="col-md-4 control-label">
                         <input id="role" type="radio" class="form-control" name="role" value='staff'>Staff</label>
+						<label class="col-md-4 control-label">
+                        <input id="role" type="radio" class="form-control" name="role" value='admin'>Admin</label>
                        </div>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
