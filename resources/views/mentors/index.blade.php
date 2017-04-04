@@ -1,12 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 align="center"> Omaha Mentoring for Kids</h1>
-    <h2 align="left"><a href="http://omk.com/Mentor/meetingschedule" style="font-size:30"> Student details  </a>|<a href="http://omk.com/Mentor/meeting schedule" style="font-size:30;">Meeting Schedule </a>|<a href="{{ action('AddcommentController@index') }}"> Add Comment </a>|<a href="http://omk.com/Mentor/notifications" style="font-size:30;"> Notifications </a>|<a href="http://omk.com/Mentor/settings" style="font-size:30;"> Settings </a></br></br>
+    <h1 align="center"> <a href="{{action ('MentorController@index')}}" style="font-size:30"> Omaha Mentoring for Kids</a></h1>
+    <!DOCTYPE html>
+<body background="http://neighbourhooddaycare.com/wp-content/uploads/2013/07/Landscape.jpg">
+<html>
+</body>
+</html>
+@if (Auth::user()->role==='mentor')
+<h2 align="left"><a href="{{ action('StudentDetailsController@index') }}" style="font-size:30"> Student Details  </a>|
+    <a href="{{ action('MeetingMentorsController@index') }}" style="font-size:30;">Meeting Schedule </a>|
+    <a href="{{ action('AddcommentController@index') }}"> Add Comment </a>|
+    <a href="http://omk.com/Mentor/notifications" style="font-size:30;"> Notifications </a>|
+    <!-- <a href="http://omk.com/Mentor/settings" style="font-size:30;"> Settings </a></br></br> -->
+    <br></br>
 	<a href="{{url('/mentors/create')}}" class="btn btn-success"> Create Mentor</a>
 	  
  </h2> 
-
+@endif
     <hr>
     <table class="table table-striped table-bordered table-hover">
         <thead>

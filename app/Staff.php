@@ -8,13 +8,15 @@ class Staff extends Model
 {
     //
     protected $fillable=[
-        'id',
         'name',
-        'email',
+        'id',
         'address',
         'zip',
+        'email',
         'cell_phone'
-
-
     ];
+
+     public function mentor() {
+        return $this->belongsTo('App\Mentor');
+        }
 }

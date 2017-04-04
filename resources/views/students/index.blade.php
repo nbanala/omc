@@ -1,12 +1,20 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 align="center"> Omaha Mentoring for Kids</h1>
-    <h2 align="left"><a href="http://omk.com/Students/meetingschedule" style="font-size:30"> Meeting Schedule </a>|<a href="http://omk.com/Students/notifications" style="font-size:30;"> Notifications </a>|<a href="http://omk.com/Students/settings" style="font-size:30;"> Settings </a></br></br>
+    <h1 align="center"> <a href="{{action ('StudentController@index')}}" style="font-size:30"> Omaha Mentoring for Kids</a></h1>
+    <!DOCTYPE html>
+    <body background="http://neighbourhooddaycare.com/wp-content/uploads/2013/07/Landscape.jpg">
+<html>
+</body>
+</html>
+@if (Auth::user()->role==='student')
+    <h2 align="left"><a href="{{ action('MeetingStudentsController@index') }}" style="font-size:30"> Meeting Schedule </a>|<a href="http://omk.com/Students/notifications" style="font-size:30;"> Notifications </a>|
+    <!-- <a href="http://omk.com/Students/settings" style="font-size:30;"> Settings </a></br></br> -->
+    <br></br>
 	<a href="{{url('/students/create')}}" class="btn btn-success"> Create Student</a>
 	  
  </h2> 
-
+@endif
     <hr>
     <table class="table table-striped table-bordered table-hover">
         <thead>
