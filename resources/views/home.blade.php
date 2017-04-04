@@ -12,13 +12,13 @@
 @if (Auth::user()->role==='mentor')
 <h2 align="center"> <a href={{action('MentorController@index')}} style="font-size:75"> Mentor  </a> 
 @elseif (Auth::user()->role==='student')
-<h2 align="center"><a href="http://omk.herokuapp.com/students" style="font-size:75;">Student </a> 
+<h2 align="center"><a href={{action('StudentController@index')}} style="font-size:75;">Student </a> 
 @elseif (Auth::user()->role==='staff')
-<h2 align="center"><a href="http://localhost/omc2/public/staffs" style="font-size:75;">  Staff </a> 
+<h2 align="center"><a href={{action('StaffController@index')}} style="font-size:75;">  Staff </a> 
          
 @else
 
-<h2 align="center"><a href="http://omk.herokuapp.com/admins" style="font-size:75;"> Admin </a> </h2>
+<h2 align="center"><a href={{action('AdminController@index')}} style="font-size:75;"> Admin </a> </h2>
 @endif
 
                 <div class="panel-body"><h2 align="center">
