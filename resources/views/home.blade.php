@@ -10,7 +10,7 @@
  @if (Auth::user())
 <body background="http://neighbourhooddaycare.com/wp-content/uploads/2013/07/Landscape.jpg">
 @if (Auth::user()->role==='mentor')
-<h2 align="center"> <a href="http://omk.herokuapp.com/mentors" style="font-size:75"> Mentor  </a> 
+<h2 align="center"> <a href={{action('MentorController@index')}} style="font-size:75"> Mentor  </a> 
 @elseif (Auth::user()->role==='student')
 <h2 align="center"><a href="http://omk.herokuapp.com/students" style="font-size:75;">Student </a> 
 @elseif (Auth::user()->role==='staff')

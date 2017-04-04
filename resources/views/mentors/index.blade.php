@@ -42,8 +42,8 @@
                 <td>{{ $mentor->zip }}</td>
                 <td>{{ $mentor->email}}</td>
                 <td>{{ $mentor->phone }}</td>
-                <td><a href="{{route('mentors.edit',$mentor->id)}}" class="btn btn-warning">Update</a></td>
-                <td>
+                <td><a href="{{route('mentors.edit',$mentor->id)}}" class="btn btn-warning">Update</a><br/><br/>
+                
                     {!! Form::open(['method' => 'DELETE', 'route'=>['mentors.destroy', $mentor->id]])!!}
                         {!! Form::submit('Delete', ['class' => 'btn btn-danger','name'=>'remove_levels']) !!}
                     {!! Form::close() !!}
