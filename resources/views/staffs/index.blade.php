@@ -7,8 +7,8 @@
 <body background="http://neighbourhooddaycare.com/wp-content/uploads/2013/07/Landscape.jpg">
 </body>
 </html>
-    <h2 align="left"><a href="http://localhost/omc2/public/mentors" style="font-size:30"> Mentors  </a>|
-    <a href="http://localhost/omc2/public/students" style="font-size:30"> Students  </a>|
+    <h2 align="left"><a href="{{ action('MentorController@index') }}" style="font-size:30"> Mentors  </a>|
+    <a href="{{ action('StudentController@index') }}" style="font-size:30"> Students  </a>|
     <a href="{{ action('MeetingScheduleController@index') }}" style="font-size:30;">Meeting Schedule </a>|
     <a href=""> Reports </a>|
     <!-- <a href="http://omk.com/staff/settings" style="font-size:30;"> Settings </a></br></br> -->
