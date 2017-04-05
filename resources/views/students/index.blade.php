@@ -8,6 +8,10 @@
 </body>
 </html>
 @if (Auth::user()->role==='student')
+<html>
+<body background="http://neighbourhooddaycare.com/wp-content/uploads/2013/07/Landscape.jpg">
+</body>
+</html>
     <h2 align="left"><a href="{{ action('MeetingStudentsController@index') }}" style="font-size:30"> Meeting Schedule </a>|<a href="http://omk.com/Students/notifications" style="font-size:30;"> Notifications </a>|
     <!-- <a href="http://omk.com/Students/settings" style="font-size:30;"> Settings </a></br></br> -->
     <br></br>

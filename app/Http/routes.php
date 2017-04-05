@@ -18,6 +18,7 @@ Route::resource('mentors','MentorController');
 Route::resource('students','StudentController');
 Route::resource('addcomments','AddcommentController');
 Route::resource('staff','StaffController');
+Route::resource('staffs','StaffController');
 Route::resource('admins','AdminController');
 Route::resource('meeting_schedules','MeetingScheduleController');
 Route::resource('meeting_mentors','MeetingMentorsController');

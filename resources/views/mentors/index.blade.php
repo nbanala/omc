@@ -8,6 +8,10 @@
 </body>
 </html>
 @if (Auth::user()->role==='mentor')
+<html>
+<body background="http://neighbourhooddaycare.com/wp-content/uploads/2013/07/Landscape.jpg">
+</body>
+</html>
 <h2 align="left"><a href="{{ action('StudentDetailsController@index') }}" style="font-size:30"> Student Details  </a>|
     <a href="{{ action('MeetingMentorsController@index') }}" style="font-size:30;">Meeting Schedule </a>|
     <a href="{{ action('AddcommentController@index') }}"> Add Comment </a>|
