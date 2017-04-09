@@ -18,6 +18,7 @@ class CreateStudentDetailsTable extends Migration
         $table->integer('id');
         $table->string('student_name');
         $table->string('attendance');
+		$table->string('comment');
         // $table->boolean('attendance_absent');
         $table->timestamps();
     });

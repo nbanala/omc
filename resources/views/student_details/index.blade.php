@@ -15,6 +15,7 @@
             <th>ID</th>
             <th>Student Name</th>
             <th>Attendance (Yes/No)</th>
+			<th>Add Comments</th>
            <!-- <th>Attendance Absent</th> -->
            <th>Action</th>
         </tr>
@@ -25,6 +26,7 @@
                 <td>{{ $student_detail->id}}</td>
                 <td>{{ $student_detail->student_name }}</td>
                 <td>{{ $student_detail->attendance}}</td>
+				<td>{{ $student_detail->comment}}</td>
                 <!-- <td>{{ $student_detail->attendance_absent}}</td> -->
                 <td>
         {!! Form::open(['method' => 'DELETE', 'route'=>['student_details.destroy', $student_detail->id]])!!}

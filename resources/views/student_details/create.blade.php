@@ -15,6 +15,10 @@
         {!! Form::label('Attendance', 'Attendance') !!}
         {!! Form::text('attendance',null,['class'=>'form-control']) !!}
     </div>
+	<div class="form-group">
+        {!! Form::label('Add Comments', 'Add Comments') !!}
+        {!! Form::text('comment',null,['class'=>'form-control']) !!}
+    </div>
      <!-- <div class="form-group">
         {!! Form::label('Attendance Absent', 'Attendance Absent') !!}
         {!! Form::checkbox('attendance_absent', null,['class'=>'form-control']) !!}

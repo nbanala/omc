@@ -10,8 +10,9 @@ class StudentDetails extends Model
         protected $fillable=[
         'id',
         'student_name',
-        'attendance'
-        // 'attendance_absent'
+        'attendance',
+        'comment'
+		// 'attendance_absent'
     ];
 
 }
