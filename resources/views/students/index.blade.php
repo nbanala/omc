@@ -1,8 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 align="center"> <a href="{{action ('StudentController@index')}}" style="font-size:30"> Omaha Mentoring for Kids</a></h1>
-    <!DOCTYPE html>
+    @if (Auth::user()->role==='student')
+	<h1 align="center"> <a href="{{action ('StudentController@index')}}" style="font-size:30"> Omaha Mentoring for Kids</a></h1>
+    @endif
+	@if (Auth::user()->role==='staff')
+	<h1 align="center"> <a href="{{action ('StaffController@index')}}" style="font-size:30"> Omaha Mentoring for Kids</a></h1>
+    <h2 style="color:red;">Students</h2>
+	@endif
+	@if (Auth::user()->role==='admin')
+	<h1 align="center"> <a href="{{action ('AdminController@index')}}" style="font-size:30"> Omaha Mentoring for Kids</a></h1>
+    <h2 style="color:red;">Students</h2>
+	@endif
+	
+	<!DOCTYPE html>
     <body background="http://neighbourhooddaycare.com/wp-content/uploads/2013/07/Landscape.jpg">
 <html>
 </body>
@@ -12,7 +23,8 @@
 <body background="http://neighbourhooddaycare.com/wp-content/uploads/2013/07/Landscape.jpg">
 </body>
 </html>
-    <h2 align="left"><a href="{{ action('MeetingStudentsController@index') }}" style="font-size:30"> Meeting Schedule </a>|<a href="http://omk.com/Students/notifications" style="font-size:30;"> Notifications </a>|
+    <h2 align="left"><a href="{{url('/meeting_schedules')}}" style="font-size:30;"> Meeting Schedule </a>|
+	<a href="http://omk.com/Students/notifications" style="font-size:30;"> Notifications </a>|
     <!-- <a href="http://omk.com/Students/settings" style="font-size:30;"> Settings </a></br></br> -->
     <br></br>
 	<a href="{{url('/students/create')}}" class="btn btn-success"> Create Student</a>

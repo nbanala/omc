@@ -9,7 +9,13 @@
 </html>
     <hr>
     <table class="table table-striped table-bordered table-hover">
-    <a href="{{url('/student_details/create')}}" class="btn btn-success">Student Details</a></br></br>
+    @if (Auth::user()->role==='staff'&'student')
+	<a href="{{url('/student_details/create')}}" class="btn btn-success">Student Details</a></br></br>
+@endif
+@if (Auth::user()->role==='mentor')
+	<h2 style="color:red;">Student Details</h2>
+@endif
+
         <thead>
         <tr class="bg-info">
             <th>ID</th>

@@ -20,7 +20,7 @@
   
  </h2> 
 
-    <hr>
+    <!--<hr>
     <table class="table table-striped table-bordered table-hover">
         <thead>
         <tr class="bg-info">
@@ -54,6 +54,6 @@
 
         </tbody>
 
-    </table>
+    </table>-->
       
 @endsection

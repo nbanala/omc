@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 align="center"> <a href="http://localhost/omc2/public/home" style="font-size:30"> Omaha Mentoring for Kids</a></h1>
-    <!DOCTYPE html>
+    @if (Auth::user()->role==='staff')
+	<h1 align="center"> <a href="{{action ('StaffController@index')}}" style="font-size:30"> Omaha Mentoring for Kids</a></h1>
+    @endif
+	@if (Auth::user()->role==='admin')
+	<h1 align="center"> <a href="{{action ('AdminController@index')}}" style="font-size:30"> Omaha Mentoring for Kids</a></h1>
+    @endif
+	<!DOCTYPE html>
 <html>
 <body background="http://neighbourhooddaycare.com/wp-content/uploads/2013/07/Landscape.jpg">
 </body>

@@ -19,16 +19,16 @@
         {!! Form::text('address',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Zip', 'Zip:') !!}
-        {!! Form::text('Zip',null,['class'=>'form-control']) !!}
+        {!! Form::label('zip', 'Zip:') !!}
+        {!! Form::text('zip',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('Email', 'Email:') !!}
-        {!! Form::text('Email',null,['class'=>'form-control']) !!}
+        {!! Form::label('email', 'Email:') !!}
+        {!! Form::text('email',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('cell_phone', 'Phone:') !!}
-        {!! Form::text('Cell_Phone',null,['class'=>'form-control']) !!}
+        {!! Form::label('cell_phone', 'Cell Phone:') !!}
+        {!! Form::text('cell_phone',null,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
         {!! Form::submit('Save', ['class' => 'btn btn-primary form-control']) !!}
